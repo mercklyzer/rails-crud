@@ -1,0 +1,6 @@
+= link_to "Home", cars_path
+= render 'flash'
+%p= @car.name
+%p= @car.description
+= link_to "Edit Car", edit_car_path(@car)
+= button_to "Delete Car", car_path(@car), method: :delete, data: {turbo_confirm: 'Are you sure?'}

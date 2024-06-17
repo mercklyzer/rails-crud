@@ -1,0 +1,10 @@
+= render 'flash'
+- @cars.each do |car|
+  %p="Name: #{car.name}"
+  %p="Description: #{car.description}"
+  = link_to 'Visit', car_path(car)
+  = link_to 'Edit', edit_car_path(car)
+  = link_to 'Delete', car_path(car), method: :delete, data: { confirm: 'Are you sure?' }
+  %hr
+
+= link_to 'Add a new car', new_car_path

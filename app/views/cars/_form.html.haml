@@ -1,0 +1,9 @@
+= form_with scope: :car, url: path, method: method.nil? ? :post : method  do |form|
+  %div
+    = form.label :name, "Name:"
+    = form.text_field :name
+  %div
+    = form.label :description, "Description:"
+    = form.text_area :description
+  %div
+    = form.submit "#{method == :post ? "Add" : "Edit"}"
